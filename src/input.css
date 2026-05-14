@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@source "../components/**/*.html";
+@source "../*.html";
+
+@theme {
+  --breakpoint-sm: 33.75rem;   /* 540px */
+  --breakpoint-md: 45rem;      /* 720px */
+  --breakpoint-lg: 60rem;      /* 960px */
+  --breakpoint-xl: 73.75rem;   /* 1180px */
+  --breakpoint-2xl: 73.75rem;  /* 1180px */
+}
+
+
+.menuLink::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background-image: url("/images/menuIcon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+.moreBtnLink::after{
+      content: "";
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background-image: url("/images/moreBtn.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-left:8px;
+}
+.font-aleo {
+  font-family: 'Aleo', serif;
+}
+
+.footerMenuLink:hover{
+  color:#ed1c24;
+  transition-duration: 0.3s;
+  transition-property: all;
+}
+
+.menuLink:hover{
+  border-color:#FFA800;
+}
+.menuLink{
+  border-bottom: 4px solid rgba(255, 168, 0, 0);
+  border-top: 0px;
+  transition-duration: 0.3s;
+  transition-property: all;
+  min-height:90px;
+}
+.filterTab li{
+  display: flex;
+  color:#594C4C;
+  border: 0.5px solid #594C4C;
+  height: 36px;
+  max-width: fit-content;
+  padding-inline: 20px;
+  border-radius: 36px;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.filterTab li:hover,.filterTab li:focus-within{
+  background-color:#594C4C;
+  color:white;
+}
+
+.filterLink{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+.filterSection::-webkit-scrollbar,.categoryTab::-webkit-scrollbar,.blogSuggest::-webkit-scrollbar,.authorCat::-webkit-scrollbar,.ingreSection::-webkit-scrollbar,.storyContent::-webkit-scrollbar,.recipes-grid::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-grid .recipeImg {
+  width: 306px;
+  height: auto;
+}
+
+
+
+@media screen and (max-width: 358px) {
+  .suggestSection figure {
+    flex-direction: column;
+    
+
+  }
+  .suggestSection figure .recipeImg{
+    width: 100%;
+    height: auto;
+  }
+}
+  
+
+
+
+

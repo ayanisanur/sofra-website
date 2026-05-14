@@ -1,0 +1,69 @@
+<header class="bg-[#F8F5F0] w-full flex justify-center h-[160px]">
+    <div class="flex items-center flex-col pt-[14px] pb-[10px] w-full px-3 sm:px-0 gap-[20px] md:gap-0 ">
+        <div class="container flex flex-row  items-center  justify-center md:justify-end">
+            <form action="/search" method="GET"  class="searchBar flex flex-1 flex-row  w-auto md:max-w-[615px] h-[46px] rounded-[30px] pr-[20px] pl-[20px] border border-[#D4D4D4] gap-[10px] items-center  ">
+                <input 
+                    type="text" 
+                    name="q"
+                    class="w-full h-full focus:outline-none"
+                >
+                <button class="searchButton flex-shrink-0 cursor-pointer flex flex-row items-center gap-[10px] " type="submit">
+                    <p class="searchParagraph text-[14px] leading-[54px] text-[#A2AEB9] whitespace-nowrap flex md:hidden pointer-events-none select-none">Videolu Tarif Ara </p>
+                    <p class="searchParagraph text-[14px] leading-[54px] text-[rgb(162,174,185)] whitespace-nowrap hidden md:flex pointer-events-none select-none">Tarif Ara</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6266 11.5128L16 14.8855L14.8855 16L11.5128 12.6266C10.2579 13.6325 8.69706 14.1797 7.08871 14.1774C3.17574 14.1774 0 11.0017 0 7.08871C0 3.17574 3.17574 0 7.08871 0C11.0017 0 14.1774 3.17574 14.1774 7.08871C14.1797 8.69706 13.6325 10.2579 12.6266 11.5128ZM11.0466 10.9284C12.0462 9.90047 12.6044 8.52254 12.6021 7.08871C12.6021 4.04293 10.1345 1.57527 7.08871 1.57527C4.04293 1.57527 1.57527 4.04293 1.57527 7.08871C1.57527 10.1345 4.04293 12.6021 7.08871 12.6021C8.52254 12.6044 9.90047 12.0462 10.9284 11.0466L11.0466 10.9284Z" fill="#594C4C"/>
+                    </svg>
+                </button>
+                
+            </form>
+            
+            <div class="user hidden md:flex flex-row items-center gap-[6px] w-[200px] p-[14px] flex-shrink-0 mr-[30px] ml-[7px] relative hover:bg-[#ffffff] hover:rounded-[24px_24px_0_0]">
+                <img src="./images/user.svg" alt="user" class="w-[24px] h-[24px]">
+                <div class="flex flex-row gap-[6px]">
+                    <a href="#" class="uppercase font-medium text-[12px] text-[#594C4C] hover:text-[#FFA800] transition-colors duration-300">giriş yap</a>
+                    <div class="w-[14px] h-0 border border-[#594C4C] rotate-[-90deg] mt-[8px]"></div>
+                    <a href="#" class="uppercase font-fira font-medium text-[12px] text-[#594C4C] hover:text-[#FFA800] transition-colors duration-300">üye ol</a>
+
+                </div>
+            </div>
+            <div class="socialMedia flex-row hidden md:flex gap-[5px] flex-shrink-0">
+                <div class="flex flex-col gap-[5px]">
+                    <img src="./images/facebook.svg" alt="facebook" class="w-[24px] h-[24px]">
+                    <img src="./images/twitter.svg" alt="twitter" class="w-[24px] h-[24px]">
+                </div>
+                <div class="flex flex-col gap-[5px]">
+                    <img src="./images/instagram.svg" alt="instagram" class="w-[24px] h-[24px]">
+                    <img src="./images/youtube.svg" alt="youtube" class="w-[24px] h-[24px]">
+                </div>
+               
+            </div>
+        </div>
+        <div class="container flex flex-row items-center justify-between md:gap-[10px]">
+            <div class="logo flex">
+                <a href="#"><img src="./images/Sofra Logo mobile.png" alt="Sofra Logo" class="md:hidden"></a>
+                <a href="#"><img src="./images/Sofra Logo desktop.png" alt="Sofra Logo" class="hidden md:block "></a>
+            </div>
+        
+            <nav class="menu flex flex-row gap-[clamp(8px,1.8vw,34px)] hidden lg:flex  ">
+                <a href="#" class="menuLink uppercase font-fira font-medium text-[clamp(10px,1.1vw,14px)] text-[#594C4C] whitespace-nowrap  flex items-center gap-[6px]">malzemeler</a>
+                <a href="#" class="menuLink uppercase font-fira font-medium text-[clamp(10px,1.1vw,14px)] text-[#594C4C] whitespace-nowrap  flex items-center gap-[6px]">tarifler</a>
+                <a href="#" class="menuLink uppercase font-fira font-medium text-[clamp(10px,1.1vw,14px)] text-[#594C4C] whitespace-nowrap flex  gap-[6px] items-center"> yaşam
+                </a>
+                <a href="#" class="menuLink uppercase font-fira font-medium text-[clamp(10px,1.1vw,14px)] text-[#594C4C] whitespace-nowrap flex gap-[6px] items-center">sofra akademi</a>
+                <a href="#" class="menuLink uppercase font-fira font-medium text-[clamp(10px,1.1vw,14px)] text-[#594C4C] whitespace-nowrap flex gap-[6px] items-center">ekipman & stil</a>
+                <a href="#" class="menuLink uppercase font-fira font-medium text-[clamp(10px,1.1vw,14px)] text-[#594C4C] whitespace-nowrap flex gap-[6px] items-center">sofra tv</a>
+                <a href="#" class="menuLink uppercase font-fira font-medium text-[clamp(10px,1.1vw,14px)] text-[#594C4C] whitespace-nowrap flex gap-[6px] items-center">yeme - içme</a>
+            </nav>
+            
+            <div class="menuIcon">
+                <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="28" height="2.4" rx="1.2" fill="#594C4C"/>
+                <rect x="6" y="8.4" width="22" height="2.4" rx="1.2" fill="#594C4C"/>
+                <rect y="16.8" width="28" height="2.4" rx="1.2" fill="#594C4C"/>
+                </svg>
+            </div>
+        </div>
+        
+        
+    </div>
+</header>

@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-home min-h-screen">
+    <div id="header"></div>
+
+    <div class="relative md:hidden overflow-hidden" id="heroSlider">
+        <div class="heroSlides flex transition-transform duration-500 ease-in-out" id="heroSlides">
+            <div class="heroSlide flex-shrink-0 w-full relative h-[320px] sm:h-[380px] bg-cover bg-center" id="heroSlideTemp">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div class="absolute left-[30px] bottom-[20px] flex flex-col gap-[6px]">
+                    <span class="heroTag font-aleo text-[#FFA800] text-[16px] font-bold"></span>
+                    <h2 class="heroTitle font-aleo font-medium text-white text-[30px] leading-[34px]"></h2>
+                    <span class="heroCounter font-aleo text-white text-[30px]"></span>
+                </div>
+                <div class="heroBtns absolute inset-0 flex flex-row items-center justify-between px-[10px]">
+                    <button class="heroPrev cursor-pointer">
+                        <img src="/images/leftArrow.svg">
+                    </button>
+                    <button class="heroNext cursor-pointer">
+                        <img src="/images/rightArrow.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-[20px]">
+        <div class="container hidden md:grid grid-cols-[1fr_240px] lg:grid-cols-[1fr_420px] gap-[8px] lg:gap-[24px]">
+            <div class="relative overflow-hidden rounded-[6px]" id="heroSliderDesktop">
+                <div class="heroSlidesDesktop flex transition-transform duration-500 ease-in-out" id="heroSlidesDesktop">
+                    <div class="heroSlideDesktop flex-shrink-0 w-full relative h-[360px] lg:h-[530px] bg-cover bg-center" id="heroSlideDesktopTemp">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 py-[20px] px-[24px] lg:py-[32px] lg:px-[60px] flex flex-col gap-[5px]">
+                            <span class="heroTag font-aleo text-[#FFA800] text-[14px] lg:text-[28px] font-bold"></span>
+                            <h2 class="heroTitle font-aleo font-medium text-white text-[22px] lg:text-[50px] leading-[28px] lg:leading-[58px]"></h2>
+                            <span class="heroCounter font-aleo text-white text-[18px] lg:text-[36px]"></span>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-[10px]">
+                            <button class="heroPrev cursor-pointer">
+                                <img src="/images/leftArrow.svg" class="w-[20px] lg:w-auto">
+                            </button>
+                            <button class="heroNext cursor-pointer">
+                                <img src="/images/rightArrow.svg" class="w-[20px] lg:w-auto">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-[8px] lg:gap-[24px]" id="heroSideCards">
+                <div class="heroSideCard flex-1 relative bg-cover bg-center rounded-[6px] overflow-hidden" id="heroSideCardTemp">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 pb-[12px] pl-[12px] lg:pb-[20px] lg:pl-[20px]">
+                        <h3 class="heroSideTitle font-aleo font-medium text-white text-[16px] lg:text-[30px] leading-[20px] lg:leading-[28px]"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-[20px]">
+        <div class="categoryTab container flex flex-row px-3 sm:px-0 overflow-x-auto scroll-smooth" id="categoryTab">
+            <div class="foodCat mr-[30px] hidden">
+                <a href="#" class="catLink flex flex-col gap-[10px] items-center justify-center w-[120px] h-[120px]">
+                    <span class="catImg flex items-center justify-center bg-[#F8F5F0] rounded-[60px] h-[76px] w-[76px]">
+                        <img src="" width="45" height="53" class="transition-all duration-300 ease-in-out scale-100 hover:scale-110">
+                    </span>
+                    <h3 class="catTitle font-aleo text-[12px] text-[#594C4C] font-bold"></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-[14px]">
+        <div class="suggestSectionTitle flex flex-col gap-[14px] md:items-center">
+            <div class="flex justify-center mt-[20px]">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">bugün ne pişirsem</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSection bg-[#F8F5F0] py-[19px] px-[15px]">
+            <div class="flex md:hidden flex-col justify-center items-center gap-[20px]">
+                <div class="container flex flex-col pb-[10px] gap-[24px]">
+                    <img src="/images/recipe1.png">
+                    <div class="flex flex-col gap-[10px]">
+                        <p class="font-aleo text-[20px] leading-[26px]">Etin en lezzetli halini arayanlar için: <span class="font-aleo font-bold text-[20px] leading-[26px]">Bol Baharatlı Pirzola</span></p>
+                        <div class="recipeBtn flex flex-row gap-[10px] lg:gap-[6px] flex-wrap">
+                            <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                <img src="/images/like.svg">
+                                <span class="difficultyText font-aleo text-[12px] text-[#8C939B]">kolay</span>
+                            </button>
+                            <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                <img src="/images/clock.svg">
+                                <span class="timeText font-aleo text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                            </button>
+                            <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                <img src="/images/save.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container flex flex-col gap-[20px]">
+                    <figure class="flex flex-row gap-[20px] min-w-0 items-center sm:items-stretch">
+                        <a href="#" class="flex-shrink-0">
+                            <img src="/images/recipe2.png" class="recipeImg w-[177px] h-[133px] object-cover rounded-[6px]">
+                        </a>
+                        <figcaption class="flex flex-col pt-[5px] justify-between min-w-0 w-full gap-2 sm:gap-0">
+                            <a href="#">
+                                <p class="font-aleo text-[16px] sm:text-[18px] leading-[24px]">Sürekli aynı çorbalardan sıkıldıysanız: <span class="font-bold">Bakla Çorbası</span></p>
+                            </a>
+                            <div class="recipeBtn flex-wrap flex flex-row gap-[10px]">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[10px] sm:text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="flex flex-row gap-[20px] min-w-0 items-center sm:items-stretch">
+                        <a href="#" class="flex-shrink-0">
+                            <img src="/images/recipe2.png" class="recipeImg w-[177px] h-[133px] object-cover rounded-[6px]">
+                        </a>
+                        <figcaption class="flex flex-col pt-[5px] justify-between min-w-0 w-full gap-2 sm:gap-0">
+                            <a href="#">
+                                <p class="font-aleo text-[16px] sm:text-[18px] leading-[24px]">Denemeyen kalmasın: <span class="font-bold">Zeytinyağlı Pancar</span></p>
+                            </a>
+                            <div class="recipeBtn flex-wrap flex flex-row gap-[10px]">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[10px] sm:text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="flex flex-row gap-[20px] min-w-0 items-center sm:items-stretch">
+                        <a href="#" class="flex-shrink-0">
+                            <img src="/images/recipe2.png" class="recipeImg w-[177px] h-[133px] object-cover rounded-[6px]">
+                        </a>
+                        <figcaption class="flex flex-col pt-[5px] justify-between min-w-0 w-full gap-2 sm:gap-0">
+                            <a href="#">
+                                <p class="font-aleo text-[16px] sm:text-[18px] leading-[24px]">Kolay yapımıyla çıtır çıtır: <span class="font-bold">Tulumba Tatlısı</span></p>
+                            </a>
+                            <div class="recipeBtn flex-wrap flex flex-row gap-[10px]">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[10px] sm:text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="hidden md:flex flex-col justify-center items-center gap-[20px]">
+                <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-[1fr_1fr_196px] md:gap-[24px] container">
+                    <div class="suggestFeaturedRecipe flex flex-col gap-[16px] md:col-span-2 lg:col-span-1">
+                        <a href="#" class="block">
+                            <img src="/images/recipe1.png" class="w-full h-[370px] md:h-[535px] lg:h-auto object-cover rounded-[6px]">
+                        </a>
+                        <div class="flex flex-col gap-[10px]">
+                            <p class="font-aleo text-[20px] leading-[26px]">Etin en lezzetli halini arayanlar için: <span class="font-aleo font-bold text-[20px] leading-[26px]">Bol Baharatlı Pirzola</span></p>
+                            <div class="recipeBtn flex flex-row gap-[10px] flex-wrap">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/like.svg">
+                                    <span class="font-aleo text-[12px] text-[#8C939B]">zor</span>
+                                </button>
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="font-aleo text-[12px] text-[#8C939B] whitespace-nowrap">35 dakika</span>
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="suggestRecipeList flex flex-col gap-[20px]">
+                        <figure class="flex flex-row gap-[16px] items-stretch">
+                            <a href="#" class="flex-shrink-0">
+                                <img src="/images/recipe2.png" class="w-[177px] h-[133px] object-cover rounded-[6px]">
+                            </a>
+                            <figcaption class="flex flex-col justify-between py-[4px] min-w-0 w-full">
+                                <a href="#"><p class="font-aleo text-[18px] leading-[24px]">Sürekli aynı çorbalardan sıkıldıysanız: <span class="font-bold">Bakla Çorbası</span></p></a>
+                                <div class="flex flex-row gap-[8px] flex-wrap">
+                                    <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                        <img src="/images/clock.svg">
+                                        <span class="font-aleo text-[12px] text-[#8C939B] whitespace-nowrap">35 dakika</span>
+                                    </button>
+                                    <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center">
+                                        <img src="/images/save.svg">
+                                    </button>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="flex flex-row gap-[16px] items-stretch">
+                            <a href="#" class="flex-shrink-0">
+                                <img src="/images/recipe2.png" class="w-[177px] h-[133px] object-cover rounded-[6px]">
+                            </a>
+                            <figcaption class="flex flex-col justify-between py-[4px] min-w-0 w-full">
+                                <a href="#"><p class="font-aleo text-[18px] leading-[24px]">Denemeyen kalmasın: <span class="font-bold">Zeytinyağlı Pancar</span></p></a>
+                                <div class="flex flex-row gap-[8px] flex-wrap">
+                                    <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                        <img src="/images/clock.svg">
+                                        <span class="font-aleo text-[12px] text-[#8C939B] whitespace-nowrap">35 dakika</span>
+                                    </button>
+                                    <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center">
+                                        <img src="/images/save.svg">
+                                    </button>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="flex flex-row gap-[16px] items-stretch">
+                            <a href="#" class="flex-shrink-0">
+                                <img src="/images/recipe2.png" class="w-[177px] h-[133px] object-cover rounded-[6px]">
+                            </a>
+                            <figcaption class="flex flex-col justify-between py-[4px] min-w-0 w-full">
+                                <a href="#"><p class="font-aleo text-[18px] leading-[24px]">Kolay yapımıyla çıtır çıtır: <span class="font-bold">Tulumba Tatlısı</span></p></a>
+                                <div class="flex flex-row gap-[8px] flex-wrap">
+                                    <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                        <img src="/images/clock.svg">
+                                        <span class="font-aleo text-[12px] text-[#8C939B] whitespace-nowrap">35 dakika</span>
+                                    </button>
+                                    <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center">
+                                        <img src="/images/save.svg">
+                                    </button>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="suggestCalendarWrapper flex justify-end md:pl-10 lg:pl-0">
+                        <div class="suggestCalendar w-full flex-shrink-0 bg-[#F5ECDD] rounded-[6px] flex flex-col justify-between">
+                            <div class="flex flex-col">
+                                <div class="calendarHeader flex items-center justify-between px-[10px] pt-[16px] pb-[10px]">
+                                    <button class="calendarPrevBtn w-[20px] h-[20px] flex items-center justify-center text-[#594C4C]">
+                                        <svg width="20" height="20" viewBox="0 0 8 12" fill="none"><path d="M6.5 1L1.5 6L6.5 11" stroke="#594C4C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </button>
+                                    <span class="calendarMonthLabel font-aleo font-bold text-[22px] text-[#594C4C] uppercase">Ağustos</span>
+                                    <button class="calendarNextBtn w-[20px] h-[20px] flex items-center justify-center text-[#594C4C]">
+                                        <svg width="20" height="20" viewBox="0 0 8 12" fill="none"><path d="M1.5 1L6.5 6L1.5 11" stroke="#594C4C" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </button>
+                                </div>
+
+                                <div class="calendarDayNames grid grid-cols-7 px-[8px] py-[8px]">
+                                    <div class="text-center font-aleo font-bold text-[11px] text-[#594C4C]">Pt</div>
+                                    <div class="text-center font-aleo font-bold text-[11px] text-[#594C4C]">Sa</div>
+                                    <div class="text-center font-aleo font-bold text-[11px] text-[#594C4C]">Ça</div>
+                                    <div class="text-center font-aleo font-bold text-[11px] text-[#594C4C]">Pe</div>
+                                    <div class="text-center font-aleo font-bold text-[11px] text-[#594C4C]">Cu</div>
+                                    <div class="text-center font-aleo font-bold text-[11px] text-[#594C4C]">Ct</div>
+                                    <div class="text-center font-aleo font-bold text-[11px] text-[#594C4C]">Pa</div>
+                                </div>
+
+                                <div class="calendarDays grid grid-cols-7 px-[8px] gap-y-[2px] pb-[14px]">
+                                    <div class="text-center font-aleo text-[12px] text-[#A2AEB9] py-[3px]">29</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">1</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">2</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">3</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">4</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">5</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">6</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">7</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">8</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">9</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">10</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">11</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">12</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">13</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">14</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">15</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">16</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">17</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">18</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">19</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">20</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">21</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">22</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">23</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">24</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">25</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">26</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">27</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">28</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">29</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">30</div>
+                                    <div class="text-center font-aleo text-[12px] text-[#594C4C] py-[3px]">31</div>
+                                    <div class="text-center font-aleo text-[11px] text-[#A2AEB9] py-[3px]"></div>
+                                    <div class="text-center font-aleo text-[11px] text-[#A2AEB9] py-[3px]"></div>
+                                    <div class="text-center font-aleo text-[11px] text-[#A2AEB9] py-[3px]"></div>
+                                </div>
+                            </div>
+
+                            <div class="calendarActiveDateBadge flex justify-start px-[10px] pb-[16px]">
+                                <div class="w-[76px] h-[76px] rounded-full bg-[#FFA800] flex flex-col items-center justify-center">
+                                    <span class="font-aleo font-bold text-[18px] leading-[18px] text-[#F8F5F0]">14</span>
+                                    <span class="font-aleo text-[12px] leading-[18px] text-[#F8F5F0] uppercase">Ağustos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blogSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center mt-[20px]">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">gerekli şeyler</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="blogSection flex justify-center">
+            <div class="container flex px-3 sm:px-0 flex-col gap-[20px]">
+                <div class="blogImg flex-shrink-0 w-full relative h-[286px] md:h-[400px] bg-cover bg-center bg-[url(/images/bitkicayi.png)] lg:hidden">
+                    <div class="flex items-center absolute bg-[#F8F5F0CC] rounded-[6px] py-[20px] px-[10px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[240px] w-full">
+                        <p class="font-aleo text-[24px] leading-[30px] text-[#594C4C] text-center">Bitki Çayı tüketiminde dikkat edilmesi gereken noktalar!</p>
+                    </div>
+                </div>
+
+                <div class="blogSuggest flex flex-row gap-[20px] overflow-x-auto scroll-smooth sm:hidden">
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-[196px] h-[242px]"></div></a>
+                        <figcaption class="py-[5px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-[196px] h-[242px]"></div></a>
+                        <figcaption class="py-[5px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-[196px] h-[242px]"></div></a>
+                        <figcaption class="py-[5px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-[196px] h-[242px]"></div></a>
+                        <figcaption class="py-[5px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-[196px] h-[242px]"></div></a>
+                        <figcaption class="py-[5px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-[196px] h-[242px]"></div></a>
+                        <figcaption class="py-[5px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-[196px] h-[242px]"></div></a>
+                        <figcaption class="py-[5px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-[24px]">
+                    <figure class="pb-[5px] lg:col-span-1">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-full h-[242px] lg:h-[380px] rounded-[6px]"></div></a>
+                        <figcaption class="lg:w-[200px] py-[10px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Bitter Çikolatanın Kanıtlanmış 5 Faydası</h3></a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="pb-[5px] lg:col-span-1">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-full h-[242px] lg:h-[380px]"></div></a>
+                        <figcaption class="lg:w-[200px] py-[10px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Evde İyi Bir Pasta Yapmanın 5 Püf Noktası</h3></a>
+                        </figcaption>
+                    </figure>
+
+                    <div class="blogFeaturedImage hidden lg:block lg:col-span-2 relative bg-cover bg-center bg-[url(/images/bitkicayi.png)] lg:h-[445px]">
+                        <div class="flex items-center absolute bg-[#F8F5F0CC] rounded-[6px] py-[20px] px-[10px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[394px] w-full">
+                            <p class="font-aleo text-[24px] leading-[30px] text-[#594C4C] text-center">Bitki Çayı tüketiminde dikkat edilmesi gereken noktalar!</p>
+                        </div>
+                    </div>
+
+                    <figure class="pb-[5px] lg:col-span-1">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-full h-[242px] lg:h-[380px]"></div></a>
+                        <figcaption class="lg:w-[200px] py-[10px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Nedir bu Kolajen?</h3></a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="pb-[5px] lg:col-span-1">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-full h-[242px] lg:h-[380px]"></div></a>
+                        <figcaption class="lg:w-[200px] py-[10px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Buzdolabına Koymamamız Gereken 5 Besin!</h3></a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-full h-[242px] lg:h-[380px]"></div></a>
+                        <figcaption class="lg:w-[200px] py-[10px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Sağlık için Zencefil Tüketin!</h3></a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="pb-[5px]">
+                        <a href="#"><div class="suggestImg bg-gray-400 w-full h-[242px] lg:h-[380px]"></div></a>
+                        <figcaption class="lg:w-[200px] py-[10px]">
+                            <a href="#"><h3 class="font-aleo text-[18px] leading-[26px]">Şerbetli tatlılar yerine sütlü tatlılar tercih edilmeli</h3></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">En Lezzetli Yeni Tarifler</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="recipes-grid container px-3 sm:px-0 grid grid-cols-1 pb-[10px] md:grid-cols-2 lg:grid-cols-4 gap-[40px]" id="recipesGrid">
+                <div class="recipeCard hidden" id="recipeCardTemp">
+                    <div class="recipeImg rounded-[6px] mt-[10px]">
+                        <img src="/images/recipeImage.png">
+                    </div>
+                    <div class="recipeSum flex flex-col py-[10px] gap-[10px]">
+                        <div class="flex flex-row justify-between">
+                            <div class="recipeBtn flex flex-row gap-[10px] lg:gap-[6px] flex-wrap">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/like.svg">
+                                    <span class="difficultyText font-aleo text-[12px] text-[#8C939B]">kolay</span>
+                                </button>
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[12px] text-[#8C939B]">15 dakika</span>
+                                </button>
+                            </div>
+                            <div class="recipeActions flex flex-row gap-[10px] lg:gap-[6px]">
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/heart.svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sumContent flex flex-col pt-[4px] pb-[10px] gap-[4px] md:h-[64px]">
+                            <a href="/dynamic-url" title="dynamic-title">
+                                <h3 class="sumTitle font-aleo font-bold text-[20px] leading-[32px] text-[#161616] tracking-[1%] hover:text-[#ed1c24] transition-all duration-300 ease-in-out">Lor Peynirli İncirli Tart</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recipeInfo flex flex-row justify-between items-center max-w-[306px] w-full">
+                        <div class="recipeAuthor flex flex-row gap-[6px] items-center">
+                            <img src="/images/recipeAuthor.png" width="26" height="26">
+                            <span class="uppercase font-aleo text-[10px] text-[#161616]">yeşim seferoğlu</span>
+                        </div>
+                        <div class="recipeRating">
+                            <a href="#" class="flex flex-row gap-[6px]">
+                                <img src="/images/star.svg">
+                                <span class="rating font-aleo text-[12px] text-[#594C4C]">4.24</span>
+                                <span class="ratingCount font-aleo text-[12px] text-[#594C4C]">(186)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">Nerede Ne Yenir</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSection bg-[#F8F5F0] py-[44px] px-[15px] md:px-[50px] flex justify-center">
+            <div class="flex flex-col justify-center items-center gap-[20px] lg:grid lg:grid-cols-2 lg:container lg:items-start">
+                <div class="container flex flex-col pb-[10px] gap-[24px]">
+                    <img src="/images/recipe1.png">
+                    <div class="flex flex-col gap-[10px]">
+                        <p class="font-aleo text-[20px] leading-[26px]">Etin en lezzetli halini arayanlar için: <span class="font-aleo font-bold text-[20px] leading-[26px]">Bol Baharatlı Pirzola</span></p>
+                        <div class="recipeBtn flex flex-row gap-[10px] lg:gap-[6px] flex-wrap">
+                            <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                <img src="/images/like.svg">
+                                <span class="difficultyText font-aleo text-[12px] text-[#8C939B]">kolay</span>
+                            </button>
+                            <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                <img src="/images/clock.svg">
+                                <span class="timeText font-aleo text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                            </button>
+                            <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                <img src="/images/save.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container flex flex-col gap-[20px]">
+                    <figure class="flex flex-row gap-[20px] min-w-0 items-center sm:items-stretch">
+                        <a href="#" class="flex-shrink-0">
+                            <img src="/images/recipe2.png" class="recipeImg w-[177px] h-[133px] object-cover rounded-[6px]">
+                        </a>
+                        <figcaption class="flex flex-col pt-[5px] justify-between min-w-0 w-full gap-2 sm:gap-0">
+                            <a href="#">
+                                <p class="font-aleo text-[16px] sm:text-[18px] leading-[24px]">Sürekli aynı çorbalardan sıkıldıysanız: <span class="font-bold">Bakla Çorbası</span></p>
+                            </a>
+                            <div class="recipeBtn flex-wrap flex flex-row gap-[10px]">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[10px] sm:text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="flex flex-row gap-[20px] min-w-0 items-center sm:items-stretch">
+                        <a href="#" class="flex-shrink-0">
+                            <img src="/images/recipe2.png" class="recipeImg w-[177px] h-[133px] object-cover rounded-[6px]">
+                        </a>
+                        <figcaption class="flex flex-col pt-[5px] justify-between min-w-0 w-full gap-2 sm:gap-0">
+                            <a href="#">
+                                <p class="font-aleo text-[16px] sm:text-[18px] leading-[24px]">Denemeyen kalmasın: <span class="font-bold">Zeytinyağlı Pancar</span></p>
+                            </a>
+                            <div class="recipeBtn flex-wrap flex flex-row gap-[10px]">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[10px] sm:text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="flex flex-row gap-[20px] min-w-0 items-center sm:items-stretch">
+                        <a href="#" class="flex-shrink-0">
+                            <img src="/images/recipe2.png" class="recipeImg w-[177px] h-[133px] object-cover rounded-[6px]">
+                        </a>
+                        <figcaption class="flex flex-col pt-[5px] justify-between min-w-0 w-full gap-2 sm:gap-0">
+                            <a href="#">
+                                <p class="font-aleo text-[16px] sm:text-[18px] leading-[24px]">Kolay yapımıyla çıtır çıtır: <span class="font-bold">Tulumba Tatlısı</span></p>
+                            </a>
+                            <div class="recipeBtn flex-wrap flex flex-row gap-[10px]">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[10px] sm:text-[12px] text-[#8C939B] whitespace-nowrap">15 dakika</span>
+                                </button>
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">Şefler & Yazarlar</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-[20px]">
+            <div class="authorTab container flex flex-row px-3 sm:px-0 overflow-x-auto scroll-smooth lg:gap-[24px]" id="authorTab">
+                <div class="authorCat flex flex-row gap-[10px] hidden">
+                    <div class="catLink flex flex-col gap-[5px] items-center justify-center w-[166px] h-[263px]">
+                        <a href="#" class="catImg flex items-center justify-center rounded-[60px]">
+                            <img src="/images/author.png" class="w-[140px] h-auto grayscale-100">
+                        </a>
+                        <a href="#" class="flex flex-col gap-[2px]">
+                            <h3 class="authorName font-aleo font-bold text-[16px] leading-[30px] text-center">Yıldız Şahinler</h3>
+                            <p class="authorTitle font-aleo text-[12px] leading-[16px] text-center">Yemek Danışmanı</p>
+                        </a>
+                        <a href="#" class="py-[8px] px-[14px]">
+                            <span class="authorMoreBtn flex cursor-pointer rounded-[20px] h-[26px] w-[26px] border-[0.5px] border-[#8C939B] items-center justify-center">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">Kısa Kısa</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-screen relative left-1/2 -translate-x-1/2 bg-[#F8F5F0] mt-[20px] flex justify-center">
+            <div class="container px-3">
+                <div class="storyContent mt-[20px] bg-[#F8F5F0] flex flex-row overflow-x-auto scroll-smooth snap-x snap-mandatory gap-[20px] pt-[20px] pb-[50px]" id="storyGrid">
+                    <div class="story snap-start flex-shrink-0 max-w-[196px] w-full hidden pl-1" id="storyTemp">
+                        <div class="storyImg relative bg-[url(/images/story1.png)] h-[306px] bg-cover bg-center rounded-[6px] min-w-0">
+                            <div class="storyAuthor flex flex-row gap-[10px] items-center absolute top-[10px] px-[16px]">
+                                <img src="/images/recipeAuthor.png" width="26" height="26">
+                                <span class="uppercase font-aleo text-[10px] text-white">yeşim seferoğlu</span>
+                            </div>
+                            <div class="storyActions absolute top-[264px] px-[16px] w-full flex justify-end">
+                                <button class="flex rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/heart.svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="storyTitle">
+                            <a href="#" class="font-aleo text-[14px] leading-[20px] text-[#161616]">Ekmeği ve Köfte Tarifiyle Ev Yapımı Gurme Burger</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">videolu tarifler</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="recipes-grid horizontal-grid container px-3 sm:px-0 flex flex-row overflow-x-auto scroll-smooth pb-[10px] gap-[20px]" id="recipesGrid">
+                <div class="recipeCard hidden" id="recipeCardTemp">
+                    <div class="recipeImg rounded-[6px] mt-[10px] w-[306px] h-[205px] relative">
+                        <img src="/images/recipeImage.png" class="w-full h-auto object-cover">
+                        <div class="videoPlayer absolute top-[10px] left-[10px] h-[42px] w-[42px] rounded-full bg-black/40 flex items-center justify-center z-10">
+                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.544 5.786C10.6925 5.87858 10.8141 6.00851 10.8967 6.1628C10.9792 6.31709 11.0198 6.49034 11.0145 6.66525C11.0091 6.84015 10.9579 7.01059 10.8661 7.15953C10.7742 7.30847 10.6449 7.4307 10.491 7.514L1.476 12.396C1.32371 12.4784 1.15262 12.5199 0.979489 12.5163C0.806358 12.5128 0.637115 12.4643 0.488332 12.3757C0.339549 12.2871 0.216324 12.1614 0.130723 12.0109C0.0451216 11.8604 7.7099e-05 11.6902 0 11.517V1C-4.21001e-07 0.821497 0.0477804 0.646246 0.138382 0.492442C0.228984 0.338639 0.359103 0.211891 0.515231 0.125358C0.671359 0.038824 0.847804 -0.00434074 1.02625 0.000344611C1.20469 0.00502997 1.37863 0.0573947 1.53 0.152002L10.544 5.786Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="recipeSum flex flex-col py-[10px] gap-[10px]">
+                        <div class="flex flex-row justify-between">
+                            <div class="recipeBtn flex flex-row gap-[10px] lg:gap-[6px] flex-wrap">
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/like.svg">
+                                    <span class="difficultyText font-aleo text-[12px] text-[#8C939B]">kolay</span>
+                                </button>
+                                <button class="flex flex-row uppercase rounded-[20px] border-[0.5px] border-[#8C939B] font-aleo text-[12px] text-[#8C939B] px-[10px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/clock.svg">
+                                    <span class="timeText font-aleo text-[12px] text-[#8C939B]">15 dakika</span>
+                                </button>
+                            </div>
+                            <div class="recipeActions flex flex-row gap-[10px] lg:gap-[6px]">
+                                <button class="flex flex-row rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/save.svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="sumContent flex flex-col pt-[4px] pb-[10px] gap-[4px]">
+                            <a href="#">
+                                <h3 class="sumTitle font-aleo font-bold text-[20px] leading-[32px] text-[#161616] tracking-[1%] hover:text-[#ed1c24] transition-all duration-300 ease-in-out">Lor Peynirli İncirli Tart</h3>
+                                <p class="sumParagraph font-aleo font-normal text-[18px] leading-[24px] tracking-[1%] text-[#161616]">Lor peyniri ve incir ile süslenmesiyle hazırlanan bu tarif, özellikle yaz aylarında hafifliği ile herkesi kendine hayran bırakır.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recipeInfo flex flex-row justify-between items-center max-w-[306px] w-full">
+                        <div class="recipeAuthor flex flex-row gap-[6px] items-center">
+                            <img src="/images/recipeAuthor.png" width="26" height="26">
+                            <span class="uppercase font-aleo text-[10px] text-[#161616]">yeşim seferoğlu</span>
+                        </div>
+                        <div class="recipeRating">
+                            <a href="#" class="flex flex-row gap-[6px]">
+                                <img src="/images/star.svg">
+                                <span class="rating font-aleo text-[12px] text-[#594C4C]">4.24</span>
+                                <span class="ratingCount font-aleo text-[12px] text-[#594C4C]">(186)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">Evde Ne Var?</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#F8F5F0] py-[24px] px-[10px] lg:py-[40px]">
+            <div class="container mx-auto flex flex-col lg:grid lg:grid-cols-[minmax(0,661px)_397px] items-center gap-10">
+                <div class="flex lg:hidden justify-center">
+                    <h3 class="font-aleo text-[24px] leading-[30px] text-center max-w-[320px]">
+                        Elindeki malzemeni seç, neler yapılır söyleyelim
+                    </h3>
+                </div>
+
+                <div class="ingreSection flex overflow-x-auto gap-[20px] pb-[10px] lg:grid lg:grid-cols-4 lg:gap-y-[24px] lg:overflow-visible w-full">
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                    <div class="ingreItem flex flex-col items-center gap-[12px] shrink-0 w-[142px] lg:w-auto">
+                        <div class="ingreCircleOuter relative flex items-center justify-center bg-white rounded-full w-[clamp(70px,10vw,144px)] h-[clamp(70px,10vw,144px)]">
+                            <div class="ingreCircleInner relative bg-gray-100 rounded-full w-[clamp(60px,7vw,103px)] h-[clamp(60px,7vw,103px)]">
+                                <a href="#" class="absolute bottom-0 right-0 translate-x-[15%] translate-y-[15%] z-10">
+                                    <span class="flex items-center justify-center rounded-full w-[34px] h-[34px] bg-white border border-[#A2AEB9]">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                            <path d="M13 8H8V13C8 13.2652 7.89464 13.5196 7.70711 13.7071C7.51957 13.8946 7.26522 14 7 14C6.73478 14 6.48043 13.8946 6.29289 13.7071C6.10536 13.5196 6 13.2652 6 13V8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H6V1C6 0.734784 6.10536 0.480429 6.29289 0.292893C6.48043 0.105357 6.73478 0 7 0C7.26522 0 7.51957 0.105357 7.70711 0.292893C7.89464 0.480429 8 0.734784 8 1V6H13C13.2652 6 13.5196 6.10536 13.7071 6.29289C13.8946 6.48043 14 6.73478 14 7C14 7.26522 13.8946 7.51957 13.7071 7.70711C13.5196 7.89464 13.2652 8 13 8Z" fill="#8C939B"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="font-aleo font-bold text-[16px] leading-[18px] text-center">Kurufasülye</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-center lg:hidden">
+                    <button class="bg-[#FFA800] px-[20px] py-[10px] rounded-[20px] flex items-center gap-[8px]">
+                        <span class="font-aleo uppercase font-bold text-[14px] text-white">tarifler</span>
+                    </button>
+                </div>
+
+                <div class="hidden lg:flex flex-col items-start">
+                    <h3 class="font-aleo text-[36px] leading-[50px] text-center">
+                        Elindeki malzemeni seç, neler yapılır söyleyelim
+                    </h3>
+                    <div class="pt-10">
+                        <button class="bg-[#FFA800] px-[20px] py-[10px] rounded-[20px] flex items-center gap-[8px]">
+                            <span class="font-aleo uppercase font-bold text-[14px] text-white">tarifler</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">Anket</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="relative overflow-hidden lg:flex lg:justify-center">
+            <div class="lg:container flex-shrink-0 w-full relative min-h-[546px] bg-cover bg-center bg-[url(/images/surveyImg2.png)] flex flex-col items-center pb-[20px] lg:grid lg:grid-cols-2 lg:flex-col-reverse lg:h-[580px] lg:px-40">
+                <div class="surveyQuestion flex items-center w-full max-w-[374px] lg:max-w-[340px] justify-center pt-[32px]">
+                    <h3 class="font-aleo text-[30px] text-center text-white leading-[36px] lg:text-[48px] lg:leading-[60px] tracking-[1%] text-left">Ülkemizin Yöresel Yemeklerine Ne Kadar Hakimsin?</h3>
+                </div>
+
+                <div class="surveyAnswers mt-[20px] w-full max-w-[374px] lg:max-w-[450px] lg:h-[400px] bg-[#F8F5F0CC] rounded-[6px] py-[30px] px-[30px] flex flex-col gap-[20px]">
+                    <span class="font-aleo font-bold text-[20px] leading-[26px] text-[#161616]">
+                        Hangisi Gaziantep mutfağına ait bir yemek değildir?
+                    </span>
+                    <div class="flex flex-col gap-[4.89px]">
+                        <label class="flex flex-row items-center gap-[12px] bg-white rounded-[6px] px-[14px] py-[10px] cursor-pointer">
+                            <input type="checkbox" class="w-[16px] h-[16px] rounded-[4px] border border-[#8C939B] accent-[#ed1c24]">
+                            <span class="font-aleo text-[16px] text-[#161616]">Beyran</span>
+                        </label>
+                        <label class="flex flex-row items-center gap-[12px] bg-white rounded-[6px] px-[14px] py-[10px] cursor-pointer">
+                            <input type="checkbox" class="w-[16px] h-[16px] rounded-[4px] border border-[#8C939B] accent-[#ed1c24]">
+                            <span class="font-aleo text-[16px] text-[#161616]">Patlıcan Kebabı</span>
+                        </label>
+                        <label class="flex flex-row items-center gap-[12px] bg-white rounded-[6px] px-[14px] py-[10px] cursor-pointer">
+                            <input type="checkbox" class="w-[16px] h-[16px] rounded-[4px] border border-[#8C939B] accent-[#ed1c24]">
+                            <span class="font-aleo text-[16px] text-[#161616]">Ciğer Kebabı</span>
+                        </label>
+                        <label class="flex flex-row items-center gap-[12px] bg-white rounded-[6px] px-[14px] py-[10px] cursor-pointer">
+                            <input type="checkbox" class="w-[16px] h-[16px] rounded-[4px] border border-[#8C939B] accent-[#ed1c24]">
+                            <span class="font-aleo text-[16px] text-[#161616]">Simit Kebabı</span>
+                        </label>
+                    </div>
+                    <div class="hidden justify-end lg:flex">
+                        <a href="#" class="flex flex-row items-center gap-[8px] bg-[#F5A623] rounded-[30px] px-[14px] py-[8px]">
+                            <span class="font-aleo text-[12px] uppercase text-white">Devamı</span>
+                            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.857144 6.85653L11.0219 6.85653L7.9108 10.5933C7.76532 10.7684 7.69533 10.994 7.71623 11.2206C7.73712 11.4473 7.84719 11.6563 8.02222 11.8018C8.19724 11.9473 8.42289 12.0173 8.64952 11.9964C8.87615 11.9755 9.0852 11.8654 9.23068 11.6904L13.516 6.54799C13.5448 6.50708 13.5706 6.46411 13.5931 6.41943C13.5931 6.37657 13.5931 6.35086 13.6531 6.30801C13.692 6.20974 13.7123 6.10513 13.7131 5.99946C13.7123 5.8938 13.692 5.78919 13.6531 5.69092C13.6531 5.64807 13.6531 5.62236 13.5931 5.5795C13.5706 5.53481 13.5448 5.49184 13.516 5.45094L9.23068 0.308546C9.1501 0.211797 9.04919 0.133993 8.93512 0.0806652C8.82106 0.0273376 8.69665 -0.000203571 8.57074 1.45779e-06C8.37048 -0.00039052 8.17641 0.0693536 8.02222 0.197126C7.93543 0.269076 7.86369 0.35744 7.81111 0.457158C7.75853 0.556876 7.72613 0.665985 7.71578 0.778241C7.70543 0.890497 7.71733 1.00369 7.7508 1.11134C7.78426 1.21899 7.83863 1.31898 7.9108 1.40559L11.0219 5.1424L0.857144 5.1424C0.629836 5.1424 0.411837 5.23269 0.251106 5.39343C0.0903746 5.55416 7.77921e-05 5.77216 7.77722e-05 5.99946C7.77523e-05 6.22677 0.0903745 6.44477 0.251106 6.6055C0.411837 6.76623 0.629836 6.85653 0.857144 6.85653Z" fill="#F8F5F0"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-[20px] flex lg:hidden">
+                    <a href="#" class="flex flex-row items-center gap-[8px] bg-[#F5A623] rounded-[30px] px-[14px] py-[8px]">
+                        <span class="font-aleo text-[12px] uppercase text-white">Tümü</span>
+                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.857144 6.85653L11.0219 6.85653L7.9108 10.5933C7.76532 10.7684 7.69533 10.994 7.71623 11.2206C7.73712 11.4473 7.84719 11.6563 8.02222 11.8018C8.19724 11.9473 8.42289 12.0173 8.64952 11.9964C8.87615 11.9755 9.0852 11.8654 9.23068 11.6904L13.516 6.54799C13.5448 6.50708 13.5706 6.46411 13.5931 6.41943C13.5931 6.37657 13.5931 6.35086 13.6531 6.30801C13.692 6.20974 13.7123 6.10513 13.7131 5.99946C13.7123 5.8938 13.692 5.78919 13.6531 5.69092C13.6531 5.64807 13.6531 5.62236 13.5931 5.5795C13.5706 5.53481 13.5448 5.49184 13.516 5.45094L9.23068 0.308546C9.1501 0.211797 9.04919 0.133993 8.93512 0.0806652C8.82106 0.0273376 8.69665 -0.000203571 8.57074 1.45779e-06C8.37048 -0.00039052 8.17641 0.0693536 8.02222 0.197126C7.93543 0.269076 7.86369 0.35744 7.81111 0.457158C7.75853 0.556876 7.72613 0.665985 7.71578 0.778241C7.70543 0.890497 7.71733 1.00369 7.7508 1.11134C7.78426 1.21899 7.83863 1.31898 7.9108 1.40559L11.0219 5.1424L0.857144 5.1424C0.629836 5.1424 0.411837 5.23269 0.251106 5.39343C0.0903746 5.55416 7.77921e-05 5.77216 7.77722e-05 5.99946C7.77523e-05 6.22677 0.0903745 6.44477 0.251106 6.6055C0.411837 6.76623 0.629836 6.85653 0.857144 6.85653Z" fill="#F8F5F0"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestSectionTitle flex flex-col md:items-center">
+            <div class="flex justify-center">
+                <div class="container pt-[20px] pb-[6px] gap-[10px] px-3 sm:px-0">
+                    <h3 class="font-aleo text-[26px] capitalize text-[#161616]">Keşfet</h3>
+                    <img src="images/vector.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-screen relative left-1/2 -translate-x-1/2 flex justify-center">
+            <div class="container px-3">
+                <div class="storyContent flex flex-row overflow-x-auto scroll-smooth snap-x snap-mandatory gap-[20px] pt-[20px] pb-[50px]" id="storyGrid">
+                    <div class="story snap-start flex-shrink-0 max-w-[196px] w-full hidden pl-1" id="storyTemp">
+                        <div class="storyImg relative bg-[url(/images/story1.png)] h-[306px] bg-cover bg-center rounded-[6px] min-w-0">
+                            <div class="storyAuthor flex flex-row gap-[10px] items-center absolute top-[10px] px-[16px]">
+                                <img src="/images/recipeAuthor.png" width="26" height="26">
+                                <span class="uppercase font-aleo text-[10px] text-white">yeşim seferoğlu</span>
+                            </div>
+                            <div class="storyActions absolute top-[264px] px-[16px] w-full flex justify-end">
+                                <button class="flex rounded-[20px] border-[0.5px] border-[#8C939B] w-[26px] h-[26px] items-center justify-center gap-[6px]">
+                                    <img src="/images/heart.svg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="storyTitle flex flex-col gap-[6px]">
+                            <a href="#" class="font-aleo text-[14px] leading-[20px] text-[#161616]">Ekmeği ve Köfte Tarifiyle Ev Yapımı Gurme Burger</a>
+                            <span class="shownNum font-aleo text-[12px] text-[#A2AEB9]">14 B Görüntülenme</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subscribe md:rounded-[6px] pb-5 flex justify-center bg-[#FFA800] lg:bg-white">
+            <div class="container md:bg-[#FFA800] flex md:flex-row py-5 px-0 lg:px-5 md:flex-row-reverse flex-col gap-[10px] justify-center">
+                <div class="subscribeContent flex flex-col gap-[30px] p-[10px] lg:w-[502px] md:justify-center">
+                    <h3 class="font-aleo font-light text-[48px] md:text-[36px] md:leading-[32px] text-[#F8F5F0] py-[10px]">
+                        Sofra'da Bu Ay
+                    </h3>
+                    <div class="flex flex-col gap-[24px] lg:gap-[36px]">
+                        <div class="flex flex-row gap-[20px] items-start">
+                            <img src="/images/plus.svg">
+                            <p class="font-aleo font-bold text-[20px] md:text-[18px] leading-[30px] md:leading-[26px] text-[#F8F5F0]">İstanbul'un İncisi Kadıköy'de Tiryakisi Olacağınız Lezzet Durakları</p>
+                        </div>
+                        <div class="flex flex-row gap-[20px] items-start">
+                            <img src="/images/plus.svg">
+                            <p class="font-aleo font-bold text-[20px] md:text-[18px] leading-[30px] md:leading-[26px] text-[#F8F5F0]">Sihirli Dokunuşlarla Işıltılı Masalar!</p>
+                        </div>
+                        <div class="pl-[46px] lg:pl-0">
+                            <p class="font-aleo font-bold text-[24px] leading-[32px] md:text-[18px] md:leading-[26px] text-[#F8F5F0]">ve Daha Fazlası...</p>
+                        </div>
+                    </div>
+                    <div class="hidden justify-center pt-[24px] md:justify-start md:pb-5 lg:flex">
+                        <button class="group bg-[#F8F5F0] py-[12px] px-[20px] rounded-[36px] w-[192px] h-[44px] hover:bg-[#ed1c24] transition-all duration-300 ease-in-out">
+                            <a href="#" class="items-center justify-center flex flex-row uppercase font-aleo text-[18px] tracking-[2%] text-[#594C4C] transition-colors duration-300 group-hover:text-[#F8F5F0] gap-[8px]">abone ol
+                                <svg class="transition-colors duration-300 group-hover:fill-[#F8F5F0] fill-[#ed1c24]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 12C0 12.3819 0.151714 12.7482 0.421768 13.0182C0.69182 13.2883 1.05809 13.44 1.44 13.44H10.56V22.56C10.56 22.9419 10.7117 23.3082 10.9818 23.5782C11.2518 23.8483 11.6181 24 12 24C12.3819 24 12.7482 23.8483 13.0182 23.5782C13.2883 23.3082 13.44 22.9419 13.44 22.56V13.44H22.56C22.9419 13.44 23.3082 13.2883 23.5782 13.0182C23.8483 12.7482 24 12.3819 24 12C24 11.6181 23.8483 11.2518 23.5782 10.9818C23.3082 10.7117 22.9419 10.56 22.56 10.56H13.44V1.44C13.44 1.05809 13.2883 0.691819 13.0182 0.421766C12.7482 0.151714 12.3819 0 12 0C11.6181 0 11.2518 0.151714 10.9818 0.421766C10.7117 0.691819 10.56 1.05809 10.56 1.44V10.56H1.44C1.05809 10.56 0.69182 10.7117 0.421768 10.9818C0.151714 11.2518 0 11.6181 0 12Z"/>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="subscribeMagazine flex flex-col">
+                    <div class="border-b border-[#F8F5F0] md:w-[492px] md:h-[471px]">
+                        <img src="/images/dergi.png">
+                    </div>
+                    <div class="flex justify-center pt-[24px] md:justify-center md:pb-5 lg:hidden">
+                        <button class="group bg-[#F8F5F0] py-[12px] px-[20px] rounded-[36px] w-[192px] h-[44px] hover:bg-[#ed1c24] transition-all duration-300 ease-in-out">
+                            <a href="#" class="items-center justify-center flex flex-row uppercase font-aleo text-[18px] tracking-[2%] text-[#594C4C] transition-colors duration-300 group-hover:text-[#F8F5F0] gap-[8px]">abone ol
+                                <svg class="transition-colors duration-300 group-hover:fill-[#F8F5F0] fill-[#ed1c24]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 12C0 12.3819 0.151714 12.7482 0.421768 13.0182C0.69182 13.2883 1.05809 13.44 1.44 13.44H10.56V22.56C10.56 22.9419 10.7117 23.3082 10.9818 23.5782C11.2518 23.8483 11.6181 24 12 24C12.3819 24 12.7482 23.8483 13.0182 23.5782C13.2883 23.3082 13.44 22.9419 13.44 22.56V13.44H22.56C22.9419 13.44 23.3082 13.2883 23.5782 13.0182C23.8483 12.7482 24 12.3819 24 12C24 11.6181 23.8483 11.2518 23.5782 10.9818C23.3082 10.7117 22.9419 10.56 22.56 10.56H13.44V1.44C13.44 1.05809 13.2883 0.691819 13.0182 0.421766C12.7482 0.151714 12.3819 0 12 0C11.6181 0 11.2518 0.151714 10.9818 0.421766C10.7117 0.691819 10.56 1.05809 10.56 1.44V10.56H1.44C1.05809 10.56 0.69182 10.7117 0.421768 10.9818C0.151714 11.2518 0 11.6181 0 12Z"/>
+                                </svg>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="index.js"></script>
+</body>
+</html>
