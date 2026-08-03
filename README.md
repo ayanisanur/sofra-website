@@ -27,6 +27,13 @@ Sofra Website, yemek tarifleri ve içerik paylaşımı için tasarlanmış stati
 - `src/input.css` — Tailwind giriş dosyası
 - `dist/output.css` — üretim CSS çıktısı
 
+## Index.html Ekran Görüntüsü
+<img width="1920" height="8174" alt="image" src="https://github.com/user-attachments/assets/be2ba94d-b541-4206-acc8-39d3634f802f" />
+
+## Author.html Ekran Görüntüsü
+<img width="1920" height="3861" alt="image" src="https://github.com/user-attachments/assets/9575a441-c943-4207-8baa-af1ea6ce932b" />
+
+
 ## Kurulum
 
 Projeyi yerelde çalıştırmak için aşağıdaki adımları izleyin:
