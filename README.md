@@ -83,6 +83,4 @@ git push origin main
 
 > Bu proje için uzak repo zaten konfigüre edilmiş durumda. Eğer farklı bir uzak repo kullanacaksanız `git remote set-url origin <github-repo-url>` komutunu kullanabilirsiniz.
 
-## Lisans
 
-Bu proje ISC lisansı altında dağıtılmaktadır.
